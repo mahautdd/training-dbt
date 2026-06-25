@@ -15,6 +15,3 @@ sources :
               period: day
           loaded_at_field: _ETL_LOADED_AT
 
-  - name : stripe
-    tables : 
-      - name : payment
