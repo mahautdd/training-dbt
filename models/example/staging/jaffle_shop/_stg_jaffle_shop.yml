@@ -3,6 +3,7 @@ models:
     description: The grain of this table is one customer per row
     columns:
       - name: customer_id
+        description: primary key for the customers table
         data_tests:
           - unique
           - not_null
@@ -11,10 +12,12 @@ models:
     description: one order per row
     columns:
       - name: order_id
+        description: primary key for orders table
         data_tests:
           - unique
           - not_null
       - name: order_status
+        description: "{{ doc('order_status') }}"
         data_tests:
           - accepted_values:
               arguments: 
